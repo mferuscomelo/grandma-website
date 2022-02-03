@@ -1,0 +1,13 @@
+{{ define "main" }}
+<section id="photos">
+    <div class="container mx-auto">
+        <h1 class="section-title mt-12 mb-24">Photos</h1>
+
+        <div class="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3 gap-32 mb-96">
+            {{ range .Pages }}
+            {{ partial "photo-card" . }}
+            {{ end }}
+        </div>
+    </div>
+</section>
+{{ end }}
