@@ -1,16 +1,23 @@
-<footer class="flex">
-    <div class="">
-        <span class="">
-            <a href="/about" class="grey-color">About</a>
-            &#8901;
-            <a href="/work" class="grey-color">Work</a>
-            &#8901;
-            <a href="/contact" class="grey-color">Contact</a>
+<footer class="flex justify-center items-center flex-col bg-purple">
+    {{ partial "svg/footer-wave.svg" }}
+
+    <div class="text-white flex items-center justify-center flex-col mt-6">
+        <span class="mb-6">
+            <!-- TODO: add referer link -->
+            Created with
+            <i>
+                {{ partial "svg/heart.svg" }}
+            </i>
+            by
+            <a href="https://mferuscomelo.com/">Milan Ferus-Comelo</a>
         </span>
 
-        <small class="">
-            &copy; Bella Comelo {{ now.Year }}. <br> All Rights Reserved. <a href="/privacy-policy/"
-                class="grey-color">Privacy Policy</a>
+        <p class="text-center mb-6">
+            &copy; Bella Comelo {{ now.Year }}.
+        </p>
+
+        <small class="text-center mb-4">
+            All Rights Reserved. <a href="/privacy-policy/" class="grey-color">Privacy Policy</a>
         </small>
     </div>
 </footer>

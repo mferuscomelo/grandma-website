@@ -1,20 +1,33 @@
-<header id="header">
-    <div class="container">
-        <nav>
+<header id="header" class="bg-purple">
+    <div class="nav-container h-12 p-8 sm:px-8 sm:py-0 flex items-center justify-end">
+        <nav class="flex items-center justify-end">
             <!-- <img inline src="/img/logo.svg" id="navLogo"> -->
-            <span class="nav-toggle mobile"></span>
-            <ul class="navbar">
-                <li><a href="/" class="nav-link">Home</a></li>
-                <li><a href="/services" class="nav-link">Services</a></li>
-                <li><a href="/work" class="nav-link">Work</a></li>
-                <li><a href="/about" class="nav-link">About</a></li>
-                <li><a href="/blog" class="nav-link">Blog</a></li>
-                <li class="no-margin"><a href="/get-quote" class="nav-button button">Get Quote</a></li>
-                <li class="nav-info mobile">
+            <span class="nav-toggle mobile before:bg-gold after:bg-gold"></span>
+            <ul class="navbar list-none bg-purple before:bg-gold after:bg-purple-light flex items-center m-0">
+                <li class="sm:mr-12">
+                    <a href="/"
+                        class="nav-link relative inline-block transition-colors duration-300 after:bg-gold text-white">Home</a>
+                </li class="sm:mr-12">
+                <li class="sm:mr-12">
+                    <a href="/about"
+                        class="nav-link relative inline-block transition-colors duration-300 after:bg-gold text-white">About</a>
+                </li>
+                <li class="sm:mr-12">
+                    <a href="/photos"
+                        class="nav-link relative inline-block transition-colors duration-300 after:bg-gold text-white">Photos</a>
+                </li>
+                <li class="sm:mr-12">
+                    <a href="/comments"
+                        class="nav-link relative inline-block transition-colors duration-300 after:bg-gold text-white">Comments</a>
+                </li>
+                <li class="sm:mr-12">
+                    <a href="/blog"
+                        class="nav-link relative inline-block transition-colors duration-300 after:bg-gold text-white">Blog</a>
+                </li>
+                <li class="nav-info mt-auto text-white mobile flex items-end self-center">
                     <!-- <img inline src="/img/logo.svg"/> -->
                     <span>
-                        <h5 class="title text-center">Milan Ferus-Comelo</h5>
-                        <p class="subtitle text-center">Web Developer <span class="red-color">|</span> Drone Pilot</p>
+                        <h5 class="title text-center uppercase m-0 font-extrabold">Bella Comelo</h5>
                     </span>
                 </li>
             </ul>

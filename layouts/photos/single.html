@@ -1,0 +1,14 @@
+{{ define "main" }}
+<section id="group">
+    <div class="content">
+        <a href="/">
+            <h1 class="title">
+                {{ partial "svg/arrow-left.svg" . }}
+                {{ .Title }}
+            </h1>
+        </a>
+
+        {{ partial "gallery" . }}
+    </div>
+</section>
+{{ end }}
