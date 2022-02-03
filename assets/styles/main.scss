@@ -31,14 +31,22 @@
     box-sizing: border-box;
 }
 
-#hero + svg {
-    width: 100%;
+#hero,
+#quote,
+#accomplishments {
+    & + svg {
+        width: 100%;
+    }
 }
 
 .quote svg {
     flex-shrink: 0;
     width: 5rem;
     height: auto;
+}
+
+.accomplishment img {
+    border-radius: 1.5rem;
 }
 
 footer {

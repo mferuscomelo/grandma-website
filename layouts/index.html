@@ -40,4 +40,34 @@
     </div>
 </section>
 
+{{ partial "svg/wave-top.svg" . }}
+
+<section id="accomplishments" class="bg-purple">
+    <div class="container py-20">
+        <h2 class="section-title mt-0 text-white">Accomplishments</h2>
+        <div class="grid grid-cols-3 gap-10 justify-items-center items-center mt-20">
+            {{ $accomplishments := readDir "assets/accomplishments/" }}
+
+            {{ range $accomplishments }}
+
+            {{ $image_jpg := resources.Get (printf "/accomplishments/%s" .Name) }}
+            {{ $title := replace .Name ".jpg" " " | humanize }}
+
+            <div class="accomplishment flex flex-col items-center justify-center">
+                {{ partial "picture" (dict "img_jpg" $image_jpg "alt" $title) }}
+
+                <p class="text-white mt-4">{{ $title }}</p>
+            </div>
+
+            {{ end }}
+        </div>
+    </div>
+</section>
+
+{{ partial "svg/wave-bottom.svg" . }}
+
+<section id="timeline" class="my-40 flex justify-center items-center">
+    {{ partial "svg/timeline.svg" . }}
+</section>
+
 {{ end }}
