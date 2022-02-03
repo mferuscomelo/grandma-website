@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="{{ $font_link }}">
 
     <!-- Styles -->
-    {{ $main_styles := resources.Get "styles/main.scss" | toCSS | minify | fingerprint }}
+    {{ $main_styles := resources.Get "styles/main.scss" | toCSS | postCSS | minify | fingerprint | resources.PostProcess }}
     <link rel="stylesheet" href="{{ $main_styles.RelPermalink }}" integrity="{{ $main_styles.Data.Integrity }}">
 
     <!-- The core Firebase JS SDK is always required and must be listed first -->
