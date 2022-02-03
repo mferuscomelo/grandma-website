@@ -1,0 +1,6 @@
+baseURL = 'https://bellacomelo.com/'
+languageCode = 'en-us'
+title = 'Bella Comelo'
+
+[minify]
+  minifyOutput = true
