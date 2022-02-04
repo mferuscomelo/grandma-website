@@ -38,25 +38,44 @@
 }
 
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 #hero,
 #quote,
 #accomplishments {
-    & + svg {
-        width: 100%;
-    }
+  & + svg {
+    width: 100%;
+  }
 }
 
-.quote svg {
+.quote,
+.comment {
+  svg {
     flex-shrink: 0;
     width: 5rem;
     height: auto;
+  }
+}
+
+.quote svg {
+  color: #6644AF;
+}
+
+.comment svg {
+  color: #B29FDA;
+
+  &:first-of-type {
+    align-self: flex-start;
+  }
+
+  &:last-of-type {
+    align-self: flex-end;
+  }
 }
 
 .accomplishment img {
-    border-radius: 1.5rem;
+  border-radius: 1.5rem;
 }
 
 footer {
