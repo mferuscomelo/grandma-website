@@ -28,8 +28,8 @@
 {{ $large_webp := $img_jpg.Resize (print $large_w " webp") }}
 
 <picture>
-    <source srcset='
-    {{ if ge $img_jpg.Width "500" }}
+  <source srcset='
+    {{ if ge $img_jpg.Width "300" }}
       {{ with $tiny_webp.RelPermalink }} {{.}} 300w {{ end }},
     {{ end }}
     {{ if ge $img_jpg.Width "500" }}
@@ -43,10 +43,9 @@
     {{ end }}
     {{ if ge $img_jpg.Width "1500" }}
       {{ with $large_webp.RelPermalink }} {{.}} 1500w {{ end }},
-    {{ end }}
-    {{ with $img_jpg }} {{ .RelPermalink }} {{ .Width }}w {{ end }},' type="image/webp">
-    <source srcset='
-    {{ if ge $img_jpg.Width "500" }}
+    {{ end }}' type="image/webp">
+  <source srcset='
+    {{ if ge $img_jpg.Width "300" }}
       {{ with $tiny_jpg.RelPermalink }} {{.}} 300w {{ end }},
     {{ end }}
     {{ if ge $img_jpg.Width "500" }}
@@ -60,8 +59,7 @@
     {{ end }}
     {{ if ge $img_jpg.Width "1500" }}
       {{ with $large_jpg.RelPermalink }} {{.}} 1500w {{ end }},
-    {{ end }}
-    {{ with $img_jpg }} {{ .RelPermalink }} {{ .Width }}w {{ end }},' type="image/jpeg">
-    <img class="{{ .class }}" src="{{ $img_jpg.RelPermalink }}" alt="{{ .alt }}" loading="lazy"
-        height="{{ with $img_jpg }} {{ .Height }} {{ end }}" width="{{ with $img_jpg }} {{ .Width }} {{ end }}">
+    {{ end }}' type="image/jpeg">
+  <img class="{{ .class }}" src="{{ $img_jpg.RelPermalink }}" alt="{{ .alt }}" loading="lazy"
+    height="{{ with $img_jpg }} {{ .Height }} {{ end }}" width="{{ with $img_jpg }} {{ .Width }} {{ end }}">
 </picture>
