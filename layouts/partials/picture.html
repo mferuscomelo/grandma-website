@@ -4,6 +4,10 @@
   .class
   .alt
 -->
+<!-- 
+  Optional:
+  lazy_load
+ -->
 
 <!-- TODO: add a smaller size -->
 
@@ -60,6 +64,7 @@
     {{ if ge $img_jpg.Width "1500" }}
       {{ with $large_jpg.RelPermalink }} {{.}} 1500w {{ end }},
     {{ end }}' type="image/jpeg">
-  <img class="{{ .class }}" src="{{ $img_jpg.RelPermalink }}" alt="{{ .alt }}" loading="lazy" decoding="async"
-    height="{{ with $img_jpg }} {{ .Height }} {{ end }}" width="{{ with $img_jpg }} {{ .Width }} {{ end }}">
+  <img class="{{ .class }}" src="{{ $img_jpg.RelPermalink }}" alt="{{ .alt }}" {{ if not (eq .lazy_load false) }}
+    loading="lazy" {{ end }} decoding="async" height="{{ with $img_jpg }} {{ .Height }} {{ end }}"
+    width="{{ with $img_jpg }} {{ .Width }} {{ end }}">
 </picture>

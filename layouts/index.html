@@ -10,7 +10,7 @@
         </div>
         <div class="img rounded-full overflow-hidden">
             {{ $img_jpg := resources.Get "index/hero-img.jpg" }}
-            {{ partial "picture" (dict "img_jpg" $img_jpg "alt" "Portrait of Bella Comelo") }}
+            {{ partial "picture" (dict "img_jpg" $img_jpg "alt" "Portrait of Bella Comelo" "lazy_load" false) }}
         </div>
     </div>
 </section>
