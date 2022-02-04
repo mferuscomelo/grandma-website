@@ -22,6 +22,9 @@ module.exports = {
     fontFamily: {
       sans: ["Montserrat"],
     },
+    container: {
+      center: true,
+    },
   },
   variants: {
     extend: {},

@@ -1,0 +1,19 @@
+{{ define "main" }}
+
+<div class="flex flex-col justify-center items-center h-[calc(100vh-50px)]">
+    <h1 class="text-purple text-9xl font-bold">404</h1>
+    <h2 class="mt-0">Page not found</h2>
+    <p class="text-grey">
+        Oops! The page you are looking for could not be found.
+    </p>
+    <a href="/" class="btn btn-sm">
+        Home
+        <i class="icon-right">{{ partial "svg/chevron-right.svg" . }}</i>
+    </a>
+</div>
+
+{{ end }}
+
+{{ define "footer" }}
+<div></div>
+{{ end }}

@@ -15,6 +15,8 @@
 
 @layer components {
   .card {
+    @apply hover:scale-105 transition-transform duration-300 ease-in-out overflow-hidden;
+
     img {
       @apply w-full;
     }
@@ -25,6 +27,55 @@
     margin-top: -21px;
     display: block;
   }
+
+  .btn {
+    @apply py-2 px-4 rounded bg-purple text-white flex justify-around items-center;
+
+    i > svg {
+      @apply ml-2 text-white;
+    }
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+#hero,
+#quote,
+#accomplishments {
+  & + svg {
+    width: 100%;
+  }
+}
+
+.quote,
+.comment {
+  svg {
+    flex-shrink: 0;
+    width: 5rem;
+    height: auto;
+  }
+}
+
+.quote svg {
+  color: #6644AF;
+}
+
+.comment svg {
+  color: #B29FDA;
+
+  &:first-of-type {
+    align-self: flex-start;
+  }
+
+  &:last-of-type {
+    align-self: flex-end;
+  }
+}
+
+.accomplishment img {
+  border-radius: 1.5rem;
 }
 
 footer {

@@ -1,0 +1,19 @@
+<div class="flex items-center">
+    <div class="relative mr-12">
+        {{ $image_jpg := resources.Get (printf "/comments/%s.jpg" .File.TranslationBaseName) }}
+        {{ partial "picture" (dict "img_jpg" $image_jpg "alt" (print "Portrait of " .Params.name)) }}
+
+        <div class="absolute flex flex-col bottom-0 left-3/4 w-full">
+            <p class="text-4xl text-gold font-bold mb-2">{{ .Params.name }}</p>
+            <small class="italic text-gray-500">{{ .Params.title }}</small>
+        </div>
+    </div>
+
+    <div class="flex comment h-fit">
+        {{ partial "svg/quotation-mark-left.svg" . }}
+        <p class="italic max-w-xl mx-8 my-10 text-justify">
+            {{ .Params.comments }}
+        </p>
+        {{ partial "svg/quotation-mark-right.svg" . }}
+    </div>
+</div>

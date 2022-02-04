@@ -1,0 +1,11 @@
+{{ define "main" }}
+<section id="comments" class="py-20">
+    <div class="container">
+        <h1 class="section-title">Comments</h1>
+
+        {{ range .Pages }}
+        {{ partial "comment" . }}
+        {{ end }}
+    </div>
+</section>
+{{ end }}
