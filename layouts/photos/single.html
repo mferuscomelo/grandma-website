@@ -1,12 +1,9 @@
 {{ define "main" }}
-<section id="group">
-    <div class="content">
-        <a href="/">
-            <h1 class="title">
-                {{ partial "svg/arrow-left.svg" . }}
-                {{ .Title }}
-            </h1>
-        </a>
+<section id="photos">
+    <div class="container py-20">
+        <h1 class="section-title section-title-left mb-16">
+            {{ .Title }}
+        </h1>
 
         {{ partial "gallery" . }}
     </div>

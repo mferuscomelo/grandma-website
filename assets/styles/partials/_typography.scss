@@ -6,6 +6,14 @@
       content: "";
       @apply w-24 absolute mx-auto my-0 h-1 bg-gold left-0 right-0 -bottom-3;
     }
+
+    &.section-title-left {
+      @apply sm:text-left;
+
+      &::after {
+        @apply sm:m-0;
+      }
+    }
   }
 }
 

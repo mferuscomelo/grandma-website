@@ -4,7 +4,7 @@
     <div class="container grid grid-cols-3 justify-items-center items-center pt-20">
         <div class="text-white col-span-2">
             <h1 class="text-8xl font-bold">Bella Comelo</h1>
-            <h2 class="mb-0">A loving wife, mother, grandmother, and social justice warrior you don't want to
+            <h2 class="mb-0 text-3xl">A loving wife, mother, grandmother, and social justice warrior you don't want to
                 mess with
             </h2>
         </div>
@@ -20,13 +20,13 @@
 <section id="quote">
     <div class="container grid grid-cols-3 gap-16 justify-items-center items-center py-20">
         <div class="img rounded-full overflow-hidden">
-            {{ $img_jpg := resources.Get "index/hero-img.jpg" }}
+            {{ $img_jpg := resources.Get "index/quote-img.jpg" }}
             {{ partial "picture" (dict "img_jpg" $img_jpg "alt" "Portrait of Bella Comelo") }}
         </div>
         <div class="flex flex-col items-end col-span-2">
             <div class="quote flex justify-center items-start">
                 {{ partial "svg/quotation-mark-left.svg" . }}
-                <p class="mx-16 my-4 text-2xl text-justify leading-relaxed">
+                <p class="mx-16 my-4 text-xl text-justify leading-relaxed">
                     To laugh often and much; to win the respect of intelligent people and the affection of children; to
                     earn the appreciation of honest critics and endure the betrayal of false friends; to appreciate
                     beauty, to find the best in others; to leave the world a bit better, whether by a healthy child, a
@@ -35,7 +35,7 @@
                 </p>
                 {{ partial "svg/quotation-mark-right.svg" . }}
             </div>
-            <p class="text-2xl">-- Ralph Waldo Emerson</p>
+            <p class="text-xl">-- Ralph Waldo Emerson</p>
         </div>
     </div>
 </section>
