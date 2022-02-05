@@ -116,3 +116,17 @@ footer {
     display: inline-block;
   }
 }
+
+.about-section:nth-of-type(2n-1) {
+  @apply bg-purple text-white;
+
+  .text {
+    grid-column-start: 1;
+  }
+}
+
+#about {
+  svg {
+    width: 100%;
+  }
+}

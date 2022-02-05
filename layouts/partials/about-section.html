@@ -1,0 +1,10 @@
+<div class="grid grid-cols-3 grid-rows-1 justify-items-center items-center gap-20 about-section container py-12">
+    <div class="img row-start-1 rounded-full overflow-hidden">
+        {{ $img_jpg := resources.Get "index/hero-img.jpg" }}
+        {{ partial "picture" (dict "img_jpg" $img_jpg "alt" "Portrait of Bella Comelo" "lazy_load" false) }}
+    </div>
+    <div class="col-span-2 row-start-1 text">
+        <h2 class="font-bold">{{ .Title }}</h2>
+        <p class="mb-0">{{ .Description }}</p>
+    </div>
+</div>

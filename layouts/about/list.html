@@ -1,0 +1,21 @@
+{{ define "main" }}
+<section id="about" class="py-20">
+    <div class="container">
+        <h1 class="section-title">About Bella Comelo</h1>
+    </div>
+
+    {{ range $index, $section := .Pages }}
+
+    {{ if not (modBool $index 2) }}
+    {{ partial "svg/wave-top.svg" . }}
+    {{ end }}
+
+    {{ partial "about-section" $section }}
+
+    {{ if not (modBool $index 2) }}
+    {{ partial "svg/wave-bottom.svg" . }}
+    {{ end }}
+
+    {{ end }}
+</section>
+{{ end }}
