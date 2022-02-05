@@ -3,7 +3,7 @@
         <div class="relative comment-picture">
             {{ partial "svg/comment-background.svg" . }}
 
-            {{ $image_jpg := resources.Get (printf "/comments/%s.jpg" .File.TranslationBaseName) }}
+            {{ $image_jpg := .Resources.GetMatch "profile_pic.jpg" }}
             {{ partial "picture" (dict "img_jpg" $image_jpg "alt" (print "Portrait of " .Params.name)) }}
         </div>
 
