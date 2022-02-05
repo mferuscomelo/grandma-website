@@ -24,7 +24,8 @@
 
   .photo-card > svg {
     width: 100%;
-    margin-top: -21px;
+    height: auto;
+    margin-top: -1.625rem;
     display: block;
   }
 
@@ -115,4 +116,26 @@ footer {
   i > svg {
     display: inline-block;
   }
+}
+
+.about-section:nth-of-type(2n-1) {
+  @apply bg-purple text-white;
+
+  .text {
+    grid-column-start: 1;
+  }
+}
+
+#about {
+  svg {
+    width: 100%;
+  }
+}
+
+.comment-picture picture {
+  position: absolute;
+  right: 2.75rem;
+  bottom: 0.5rem;
+  border-radius: 50%;
+  overflow: hidden;
 }
